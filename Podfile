@@ -8,9 +8,6 @@ target 'Movie-MVVM-RxSwift' do
   # Pods for Movie-MVVM-RxSwift
   pod 'Alamofire'
   pod 'Kingfisher'
-  pod 'IQKeyboardManager'
-  pod 'NVActivityIndicatorView'
-  pod 'PanModal'
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'

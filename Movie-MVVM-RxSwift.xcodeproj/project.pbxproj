@@ -9,15 +9,30 @@
 /* Begin PBXBuildFile section */
 		1431DC23723CF7B313EF968F /* Pods_Movie_MVVM_RxSwift_Movie_MVVM_RxSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B25FAE5FAD565328494B29 /* Pods_Movie_MVVM_RxSwift_Movie_MVVM_RxSwiftUITests.framework */; };
 		6B4514A82A9B8CCC0093A8F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514A72A9B8CCC0093A8F3 /* AppDelegate.swift */; };
-		6B4514AA2A9B8CCC0093A8F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514A92A9B8CCC0093A8F3 /* SceneDelegate.swift */; };
-		6B4514AC2A9B8CCC0093A8F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514AB2A9B8CCC0093A8F3 /* ViewController.swift */; };
-		6B4514AF2A9B8CCC0093A8F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514AD2A9B8CCC0093A8F3 /* Main.storyboard */; };
+		6B4514AC2A9B8CCC0093A8F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514AB2A9B8CCC0093A8F3 /* HomeViewController.swift */; };
 		6B4514B22A9B8CCC0093A8F3 /* Movie_MVVM_RxSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514B02A9B8CCC0093A8F3 /* Movie_MVVM_RxSwift.xcdatamodeld */; };
 		6B4514B42A9B8CCD0093A8F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514B32A9B8CCD0093A8F3 /* Assets.xcassets */; };
 		6B4514B72A9B8CCD0093A8F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514B52A9B8CCD0093A8F3 /* LaunchScreen.storyboard */; };
 		6B4514C22A9B8CCD0093A8F3 /* Movie_MVVM_RxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514C12A9B8CCD0093A8F3 /* Movie_MVVM_RxSwiftTests.swift */; };
 		6B4514CC2A9B8CCD0093A8F3 /* Movie_MVVM_RxSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514CB2A9B8CCD0093A8F3 /* Movie_MVVM_RxSwiftUITests.swift */; };
 		6B4514CE2A9B8CCD0093A8F3 /* Movie_MVVM_RxSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514CD2A9B8CCD0093A8F3 /* Movie_MVVM_RxSwiftUITestsLaunchTests.swift */; };
+		6B4514E62A9B99400093A8F3 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514E52A9B99400093A8F3 /* SplashScreen.swift */; };
+		6B4514F02A9B99B40093A8F3 /* Ubuntu-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514E82A9B99B40093A8F3 /* Ubuntu-BoldItalic.ttf */; };
+		6B4514F12A9B99B40093A8F3 /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514E92A9B99B40093A8F3 /* Ubuntu-Bold.ttf */; };
+		6B4514F22A9B99B40093A8F3 /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514EA2A9B99B40093A8F3 /* Ubuntu-Medium.ttf */; };
+		6B4514F32A9B99B40093A8F3 /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514EB2A9B99B40093A8F3 /* Ubuntu-Italic.ttf */; };
+		6B4514F42A9B99B40093A8F3 /* Ubuntu-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514EC2A9B99B40093A8F3 /* Ubuntu-LightItalic.ttf */; };
+		6B4514F52A9B99B40093A8F3 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514ED2A9B99B40093A8F3 /* Ubuntu-Light.ttf */; };
+		6B4514F62A9B99B40093A8F3 /* Ubuntu-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514EE2A9B99B40093A8F3 /* Ubuntu-MediumItalic.ttf */; };
+		6B4514F72A9B99B40093A8F3 /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B4514EF2A9B99B40093A8F3 /* Ubuntu-Regular.ttf */; };
+		6B4514F92A9B99CB0093A8F3 /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514F82A9B99CB0093A8F3 /* AppUtilities.swift */; };
+		6B4514FB2A9B9C1E0093A8F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514FA2A9B9C1E0093A8F3 /* BaseViewController.swift */; };
+		6B4514FD2A9B9C710093A8F3 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514FC2A9B9C710093A8F3 /* BaseNavigationController.swift */; };
+		6B4514FF2A9B9C940093A8F3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4514FE2A9B9C940093A8F3 /* BaseViewModel.swift */; };
+		6B4515012A9B9CC50093A8F3 /* CellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4515002A9B9CC50093A8F3 /* CellHelper.swift */; };
+		6B4515082A9BA0020093A8F3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4515072A9BA0020093A8F3 /* UIView+Extension.swift */; };
+		6B45150A2A9BA0240093A8F3 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4515092A9BA0240093A8F3 /* UIImageView+Extension.swift */; };
+		6B45150D2A9BA5680093A8F3 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45150C2A9BA5680093A8F3 /* MovieCell.swift */; };
 		A02E9EDFC6867064040683E4 /* Pods_Movie_MVVM_RxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A521943CDE725CC3C66710E0 /* Pods_Movie_MVVM_RxSwiftTests.framework */; };
 		AEF3C102561F5052E60543A7 /* Pods_Movie_MVVM_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F235013E8A698F3AEF9F25 /* Pods_Movie_MVVM_RxSwift.framework */; };
 /* End PBXBuildFile section */
@@ -43,9 +58,7 @@
 		6493D1669E87B159D9952D63 /* Pods-Movie-MVVM-RxSwift-Movie-MVVM-RxSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie-MVVM-RxSwift-Movie-MVVM-RxSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-Movie-MVVM-RxSwift-Movie-MVVM-RxSwiftUITests/Pods-Movie-MVVM-RxSwift-Movie-MVVM-RxSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B4514A42A9B8CCC0093A8F3 /* Movie-MVVM-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie-MVVM-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4514A72A9B8CCC0093A8F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B4514A92A9B8CCC0093A8F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6B4514AB2A9B8CCC0093A8F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6B4514AE2A9B8CCC0093A8F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B4514AB2A9B8CCC0093A8F3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B4514B12A9B8CCC0093A8F3 /* Movie_MVVM_RxSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Movie_MVVM_RxSwift.xcdatamodel; sourceTree = "<group>"; };
 		6B4514B32A9B8CCD0093A8F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B4514B62A9B8CCD0093A8F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +68,23 @@
 		6B4514C72A9B8CCD0093A8F3 /* Movie-MVVM-RxSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie-MVVM-RxSwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4514CB2A9B8CCD0093A8F3 /* Movie_MVVM_RxSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_MVVM_RxSwiftUITests.swift; sourceTree = "<group>"; };
 		6B4514CD2A9B8CCD0093A8F3 /* Movie_MVVM_RxSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_MVVM_RxSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B4514E52A9B99400093A8F3 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		6B4514E82A9B99B40093A8F3 /* Ubuntu-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6B4514E92A9B99B40093A8F3 /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		6B4514EA2A9B99B40093A8F3 /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		6B4514EB2A9B99B40093A8F3 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
+		6B4514EC2A9B99B40093A8F3 /* Ubuntu-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LightItalic.ttf"; sourceTree = "<group>"; };
+		6B4514ED2A9B99B40093A8F3 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		6B4514EE2A9B99B40093A8F3 /* Ubuntu-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MediumItalic.ttf"; sourceTree = "<group>"; };
+		6B4514EF2A9B99B40093A8F3 /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		6B4514F82A9B99CB0093A8F3 /* AppUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
+		6B4514FA2A9B9C1E0093A8F3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6B4514FC2A9B9C710093A8F3 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		6B4514FE2A9B9C940093A8F3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		6B4515002A9B9CC50093A8F3 /* CellHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellHelper.swift; sourceTree = "<group>"; };
+		6B4515072A9BA0020093A8F3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		6B4515092A9BA0240093A8F3 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		6B45150C2A9BA5680093A8F3 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		6D1479D5995F691438B184EC /* Pods-Movie-MVVM-RxSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie-MVVM-RxSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-Movie-MVVM-RxSwiftTests/Pods-Movie-MVVM-RxSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		7061F90894EE2A6F68B2E7A1 /* Pods-Movie-MVVM-RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie-MVVM-RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-Movie-MVVM-RxSwift/Pods-Movie-MVVM-RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		88F235013E8A698F3AEF9F25 /* Pods_Movie_MVVM_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie_MVVM_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				6B4514A72A9B8CCC0093A8F3 /* AppDelegate.swift */,
-				6B4514A92A9B8CCC0093A8F3 /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -179,9 +208,9 @@
 		6B4514DC2A9B8E930093A8F3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				6B4514AB2A9B8CCC0093A8F3 /* ViewController.swift */,
-				6B4514AD2A9B8CCC0093A8F3 /* Main.storyboard */,
 				6B4514B52A9B8CCD0093A8F3 /* LaunchScreen.storyboard */,
+				6B4515022A9B9D8B0093A8F3 /* SplashScreen */,
+				6B4515032A9B9D990093A8F3 /* HomeScreen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -203,6 +232,9 @@
 		6B4514DF2A9B8EF50093A8F3 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				6B4514FA2A9B9C1E0093A8F3 /* BaseViewController.swift */,
+				6B4514FC2A9B9C710093A8F3 /* BaseNavigationController.swift */,
+				6B4514FE2A9B9C940093A8F3 /* BaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -210,6 +242,7 @@
 		6B4514E02A9B8EFB0093A8F3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6B4515002A9B9CC50093A8F3 /* CellHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -217,6 +250,8 @@
 		6B4514E12A9B96970093A8F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6B4515072A9BA0020093A8F3 /* UIView+Extension.swift */,
+				6B4515092A9BA0240093A8F3 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,8 +259,9 @@
 		6B4514E22A9B96A50093A8F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6B4514B82A9B8CCD0093A8F3 /* Info.plist */,
+				6B4514E72A9B99930093A8F3 /* Fonts */,
 				6B4514E42A9B96D40093A8F3 /* Assets */,
+				6B4514B82A9B8CCD0093A8F3 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -233,6 +269,7 @@
 		6B4514E32A9B96AE0093A8F3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6B4514F82A9B99CB0093A8F3 /* AppUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +282,70 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		6B4514E72A9B99930093A8F3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6B4514E92A9B99B40093A8F3 /* Ubuntu-Bold.ttf */,
+				6B4514E82A9B99B40093A8F3 /* Ubuntu-BoldItalic.ttf */,
+				6B4514EB2A9B99B40093A8F3 /* Ubuntu-Italic.ttf */,
+				6B4514ED2A9B99B40093A8F3 /* Ubuntu-Light.ttf */,
+				6B4514EC2A9B99B40093A8F3 /* Ubuntu-LightItalic.ttf */,
+				6B4514EA2A9B99B40093A8F3 /* Ubuntu-Medium.ttf */,
+				6B4514EE2A9B99B40093A8F3 /* Ubuntu-MediumItalic.ttf */,
+				6B4514EF2A9B99B40093A8F3 /* Ubuntu-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6B4515022A9B9D8B0093A8F3 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6B4514E52A9B99400093A8F3 /* SplashScreen.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		6B4515032A9B9D990093A8F3 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6B4515042A9B9DAD0093A8F3 /* Model */,
+				6B4515062A9B9DC20093A8F3 /* View */,
+				6B4515052A9B9DBB0093A8F3 /* ViewModel */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		6B4515042A9B9DAD0093A8F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B4515052A9B9DBB0093A8F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B4515062A9B9DC20093A8F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B4514AB2A9B8CCC0093A8F3 /* HomeViewController.swift */,
+				6B45150B2A9BA54B0093A8F3 /* MovieCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B45150B2A9BA54B0093A8F3 /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				6B45150C2A9BA5680093A8F3 /* MovieCell.swift */,
+			);
+			path = MovieCell;
+			sourceTree = "<group>";
+		};
 		912B5EBF765F8E0D7CA8F93D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,7 +356,6 @@
 				AB7DE432706ED30A32059BFB /* Pods-Movie-MVVM-RxSwiftTests.debug.xcconfig */,
 				6D1479D5995F691438B184EC /* Pods-Movie-MVVM-RxSwiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -368,9 +468,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B4514F12A9B99B40093A8F3 /* Ubuntu-Bold.ttf in Resources */,
+				6B4514F32A9B99B40093A8F3 /* Ubuntu-Italic.ttf in Resources */,
+				6B4514F22A9B99B40093A8F3 /* Ubuntu-Medium.ttf in Resources */,
+				6B4514F42A9B99B40093A8F3 /* Ubuntu-LightItalic.ttf in Resources */,
+				6B4514F52A9B99B40093A8F3 /* Ubuntu-Light.ttf in Resources */,
 				6B4514B72A9B8CCD0093A8F3 /* LaunchScreen.storyboard in Resources */,
 				6B4514B42A9B8CCD0093A8F3 /* Assets.xcassets in Resources */,
-				6B4514AF2A9B8CCC0093A8F3 /* Main.storyboard in Resources */,
+				6B4514F02A9B99B40093A8F3 /* Ubuntu-BoldItalic.ttf in Resources */,
+				6B4514F72A9B99B40093A8F3 /* Ubuntu-Regular.ttf in Resources */,
+				6B4514F62A9B99B40093A8F3 /* Ubuntu-MediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,10 +605,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4514AC2A9B8CCC0093A8F3 /* ViewController.swift in Sources */,
+				6B4514E62A9B99400093A8F3 /* SplashScreen.swift in Sources */,
+				6B4514FD2A9B9C710093A8F3 /* BaseNavigationController.swift in Sources */,
+				6B45150D2A9BA5680093A8F3 /* MovieCell.swift in Sources */,
+				6B4514AC2A9B8CCC0093A8F3 /* HomeViewController.swift in Sources */,
+				6B4514F92A9B99CB0093A8F3 /* AppUtilities.swift in Sources */,
+				6B4515012A9B9CC50093A8F3 /* CellHelper.swift in Sources */,
 				6B4514A82A9B8CCC0093A8F3 /* AppDelegate.swift in Sources */,
+				6B4514FF2A9B9C940093A8F3 /* BaseViewModel.swift in Sources */,
+				6B45150A2A9BA0240093A8F3 /* UIImageView+Extension.swift in Sources */,
 				6B4514B22A9B8CCC0093A8F3 /* Movie_MVVM_RxSwift.xcdatamodeld in Sources */,
-				6B4514AA2A9B8CCC0093A8F3 /* SceneDelegate.swift in Sources */,
+				6B4515082A9BA0020093A8F3 /* UIView+Extension.swift in Sources */,
+				6B4514FB2A9B9C1E0093A8F3 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,14 +653,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6B4514AD2A9B8CCC0093A8F3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6B4514AE2A9B8CCC0093A8F3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6B4514B52A9B8CCD0093A8F3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -685,7 +792,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Movie Tailer";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -715,7 +821,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Movie Tailer";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

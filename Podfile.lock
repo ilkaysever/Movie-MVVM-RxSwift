@@ -1,11 +1,6 @@
 PODS:
   - Alamofire (5.7.1)
-  - IQKeyboardManager (6.5.11)
   - Kingfisher (7.7.0)
-  - NVActivityIndicatorView (5.1.1):
-    - NVActivityIndicatorView/Base (= 5.1.1)
-  - NVActivityIndicatorView/Base (5.1.1)
-  - PanModal (1.2.7)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -16,10 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - IQKeyboardManager
   - Kingfisher
-  - NVActivityIndicatorView
-  - PanModal
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -27,10 +19,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - IQKeyboardManager
     - Kingfisher
-    - NVActivityIndicatorView
-    - PanModal
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -38,15 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
-  IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
   Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
-  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
-  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 1d7d5a6ab097584c908c0dd65c45491096dddc99
+PODFILE CHECKSUM: 6f6651fba2c2c6b69d61704bd8181fe866685c82
 
 COCOAPODS: 1.12.0
