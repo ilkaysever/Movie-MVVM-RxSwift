@@ -37,7 +37,7 @@ final class SplashScreen: UIViewController {
     }
     
     private func navigateToMainPage() {
-        AppDelegate.shared?.openHomePage()
+        AppDelegate.shared?.openMainPage()
     }
     
 }

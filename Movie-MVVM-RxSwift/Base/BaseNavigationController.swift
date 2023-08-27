@@ -16,8 +16,12 @@ final class BaseNavigationController: UINavigationController {
         configurateNavigationBar()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .darkContent
+    }
+    
     func configurateNavigationBar() {
-        let titleStyle: [NSAttributedString.Key: Any] = [.foregroundColor: AppColors.navigationTitle, .font: AppFonts.UbuntuMedium16!]
+        let titleStyle: [NSAttributedString.Key: Any] = [.foregroundColor: AppColors.navigationTitle, .font: AppFonts.UbuntuBold18!]
         
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()

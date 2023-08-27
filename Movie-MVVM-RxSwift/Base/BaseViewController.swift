@@ -15,6 +15,10 @@ class BaseViewController: UIViewController {
         setupUI()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .darkContent
+    }
+    
     private func setupUI() {
         navigationItem.backButtonTitle = ""
         view.backgroundColor = AppColors.backgroundColor

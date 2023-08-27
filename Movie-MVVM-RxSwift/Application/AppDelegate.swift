@@ -29,35 +29,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     }
     
-        func openHomePage() {
-            let vc = HomeViewController()
-            let rootNav = BaseNavigationController(rootViewController: vc)
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = rootNav
-            window?.makeKeyAndVisible()
-        }
-    
-//    window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-//    window?.windowScene = windowScene
-//    
-//    self.window = UIWindow(windowScene: windowScene)
-//
-//    let vc = ViewController()
-//    let rootNC = UINavigationController(rootViewController: vc)
-//
-//    self.window?.rootViewController = rootNC
-//    self.window?.makeKeyAndVisible()
-    
-//        func openMainPage() {
-//            UIView.transition(with: window!, duration: 0.80, options: .transitionFlipFromRight, animations: {
-//                UIView.performWithoutAnimation {
-//                    let tabbar = BaseTabbarController()
-//                    if let window = self.window {
-//                        window.rootViewController = tabbar
-//                    }
-//                }
-//            }, completion: nil)
-//        }
+    func openMainPage() {
+        UIView.transition(with: window!, duration: 0.80, options: .transitionFlipFromRight, animations: {
+            UIView.performWithoutAnimation {
+                let vc = HomeViewController()
+                let rootNav = BaseNavigationController(rootViewController: vc)
+                if let window = self.window {
+                    window.rootViewController = rootNav
+                }
+            }
+        }, completion: nil)
+    }
     
     // MARK: - Core Data stack
     
