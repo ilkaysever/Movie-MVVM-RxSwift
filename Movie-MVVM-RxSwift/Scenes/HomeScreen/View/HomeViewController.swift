@@ -24,7 +24,6 @@ final class HomeViewController: BaseViewController {
         super.viewDidLoad()
         configureUI()
         setupBindings()
-        //fetchPopularMovies()
         configureTableView()
     }
     
@@ -39,7 +38,6 @@ final class HomeViewController: BaseViewController {
     }
     
     private func fetchPopularMovies() {
-        viewModel.fetchPopularMovies()
         viewModel.loading.bind(to: self.indicator.rx.isAnimating).disposed(by: disposeBag)
         viewModel.movieList.observe(on: MainScheduler.asyncInstance).subscribe { data in
             self.moviList = data
@@ -48,6 +46,7 @@ final class HomeViewController: BaseViewController {
         viewModel.error.observe(on: MainScheduler.asyncInstance).subscribe { errorMessage in
             print(errorMessage)
         }.disposed(by: disposeBag)
+        viewModel.fetchPopularMovies()
     }
     
     // MARK: - TableView Configure
@@ -81,11 +80,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        //        let vc = ProductDetailViewController()
-        //        let detailData = viewModel.getProductList()[indexPath.row]
-        //        vc.detailData = detailData
-        //        navigationController?.pushViewController(vc, animated: true)
+        guard let id = moviList[indexPath.row].id else { return }
+                let vc = MovieDetailViewController()
+        vc.id = id
+                //let detailData = viewModel.getProductList()[indexPath.row]
+                //vc.detailData = detailData
+                navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

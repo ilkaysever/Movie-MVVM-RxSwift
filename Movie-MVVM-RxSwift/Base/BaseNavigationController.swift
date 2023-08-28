@@ -31,13 +31,13 @@ final class BaseNavigationController: UINavigationController {
             appearance.setBackIndicatorImage(UIImage(systemName: "arrow.left"), transitionMaskImage: UIImage(systemName: "arrow.left"))
             
             UINavigationBar.appearance().isTranslucent = false
-            UINavigationBar.appearance().tintColor = AppColors.white
+            UINavigationBar.appearance().tintColor = AppColors.backgroundColorDark
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
         } else {
             UINavigationBar.appearance().backgroundColor = AppColors.white
-            UINavigationBar.appearance().tintColor = AppColors.white
+            UINavigationBar.appearance().tintColor = AppColors.backgroundColorDark
             UINavigationBar.appearance().isTranslucent = false
         }
     }
