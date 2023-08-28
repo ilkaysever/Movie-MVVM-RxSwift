@@ -17,9 +17,6 @@ final class MovieCell: UITableViewCell, ReusableView, NibLoadableView {
     private let rateImgView: UIImageView = UIImageView()
     private let rateLabel: UILabel = UILabel()
     
-    // MARK: - Variables
-    
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         drawCell()
@@ -45,10 +42,30 @@ final class MovieCell: UITableViewCell, ReusableView, NibLoadableView {
     }
     
     private func drawCell() {
-        DispatchQueue.main.async {
-            self.contentView.backgroundColor = AppColors.backgroundColor
-            self.createCellConstraints()
+        contentView.backgroundColor = AppColors.backgroundColor
+        createCellConstraints()
+    }
+    
+    func fillMovieCell(with movieModel: MovieItem?) {
+        guard let model = movieModel else { return }
+        let imgUrl = Constants.imgBaseURL + (model.posterPath ?? "")
+        let voteAverage = model.voteAverage?.rounded(toPlaces: 1) ?? 0.0
+        
+        if voteAverage < 7 {
+            rateImgView.tintColor = .red
+            rateLabel.textColor = .red
+        } else if voteAverage >= 7 && voteAverage <= 9 {
+            rateImgView.tintColor = .orange
+            rateLabel.textColor = .orange
+        } else if voteAverage > 9 {
+            rateImgView.tintColor = .green
+            rateLabel.textColor = .green
         }
+        
+        titleLabel.text = model.originalTitle
+        releaseLabel.text = model.releaseDate
+        rateLabel.text = "\(voteAverage)" + " / " + "10"
+        movieImgView.setImage(with: imgUrl)
     }
     
 }
@@ -67,7 +84,6 @@ extension MovieCell {
         }
         
         // Movie Poster Image
-        movieImgView.image = UIImage(named: "splash")
         movieImgView.contentMode = .scaleAspectFill
         movieImgView.backgroundColor = .clear
         movieImgView.snp.makeConstraints { (make) in
@@ -78,7 +94,6 @@ extension MovieCell {
         }
         
         // Movie Title
-        titleLabel.text = "The Shawshank Redepmption"
         titleLabel.textAlignment = .left
         titleLabel.numberOfLines = 2
         titleLabel.textColor = AppColors.navigationTitle
@@ -90,7 +105,6 @@ extension MovieCell {
         }
         
         // Release Label
-        releaseLabel.text = "1993"
         releaseLabel.textAlignment = .left
         releaseLabel.textColor = .lightGray
         releaseLabel.font = AppFonts.UbuntuMedium14
@@ -102,7 +116,6 @@ extension MovieCell {
         
         // Rate Star Image
         rateImgView.image = UIImage(systemName: "star.fill")
-        rateImgView.tintColor = .red
         rateImgView.contentMode = .scaleAspectFit
         rateImgView.backgroundColor = .clear
         rateImgView.snp.makeConstraints { (make) in
@@ -112,9 +125,7 @@ extension MovieCell {
         }
         
         // Rate Label
-        rateLabel.text = "6.5 / 10"
         rateLabel.textAlignment = .left
-        rateLabel.textColor = .red
         rateLabel.font = AppFonts.UbuntuMedium12
         rateLabel.snp.makeConstraints { (make) in
             make.left.equalTo(rateImgView.snp.right).offset(4)

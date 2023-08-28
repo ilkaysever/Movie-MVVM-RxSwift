@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SplashScreen: UIViewController {
+final class SplashScreen: BaseViewController {
     
     // MARK: - UI Components
     private let splashImg: UIImageView = UIImageView()
@@ -64,7 +64,7 @@ extension SplashScreen {
         indicator.addCornerRadius(radius: 8)
         indicator.snp.makeConstraints { make in
             make.centerY.centerX.equalToSuperview()
-            make.height.width.equalTo(56)
+            make.height.width.equalTo(70)
         }
     }
     
