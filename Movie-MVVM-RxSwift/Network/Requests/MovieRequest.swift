@@ -11,8 +11,8 @@ class MovieRequests {
     
     static let shared = MovieRequests()
     
-    func popularMovieRequest(completion: @escaping (MovieResponseModel?) -> ()) {
-        guard let url = URL(string: "\(Constants.baseURL)/movie/popular?api_key=\(Constants.apiKey)&language=en-US&page=1") else { return }
+    func popularMovieRequest(pageCount: Int, completion: @escaping (MovieResponseModel?) -> ()) {
+        guard let url = URL(string: "\(Constants.baseURL)/movie/popular?api_key=\(Constants.apiKey)&language=en-US&page=\(pageCount)") else { return }
         NetworkManager.shared.request(type: MovieResponseModel.self, url: url, method: .get) { [weak self] response in
             guard let self = self else { return }
             switch response {

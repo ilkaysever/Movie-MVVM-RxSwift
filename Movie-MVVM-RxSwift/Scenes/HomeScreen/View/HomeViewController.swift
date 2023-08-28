@@ -13,40 +13,49 @@ final class HomeViewController: BaseViewController {
     
     // MARK: - UI Components
     private let tableView: UITableView = UITableView()
+    private let buttonView = CustomButton()
     private let indicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     // MARK: - Variables
     let viewModel = MovieViewModel()
     let disposeBag = DisposeBag()
-    var moviList = [MovieItem]()
+    var initalPageCount = 1
+    var model = MovieResponseModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        setupBindings()
+        setupBindings(pageCount: initalPageCount)
         configureTableView()
     }
     
     private func configureUI() {
-        view.addSubviews(tableView, indicator)
+        view.addSubviews(tableView, buttonView, indicator)
         navigationTitle(title: "Movie List")
         createIndicator()
+        createButton()
+        buttonView.addTarget(self, action: #selector(didTappedLoad), for: .touchUpInside)
+        buttonView.configureButton(with: IconTextButtonViewModel(image: UIImage(systemName: "plus"), text: "Load More", backgroundColor: AppColors.borderColor))
     }
     
-    private func setupBindings() {
-        fetchPopularMovies()
+    private func setupBindings(pageCount: Int) {
+        fetchPopularMovies(pageCount: pageCount)
     }
     
-    private func fetchPopularMovies() {
+    private func fetchPopularMovies(pageCount: Int) {
         viewModel.loading.bind(to: self.indicator.rx.isAnimating).disposed(by: disposeBag)
-        viewModel.movieList.observe(on: MainScheduler.asyncInstance).subscribe { data in
-            self.moviList = data
+        viewModel.moviRespons.observe(on: MainScheduler.asyncInstance).subscribe { data in
+            self.model = data
             self.tableView.reloadData()
         }.disposed(by: disposeBag)
         viewModel.error.observe(on: MainScheduler.asyncInstance).subscribe { errorMessage in
             print(errorMessage)
         }.disposed(by: disposeBag)
-        viewModel.fetchPopularMovies()
+        viewModel.fetchPopularMovies(pageCount: pageCount)
+    }
+    
+    @objc func didTappedLoad() {
+        print("basıldı...")
     }
     
     // MARK: - TableView Configure
@@ -54,6 +63,7 @@ final class HomeViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = AppColors.backgroundColor
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.register(MovieCell.self, forCellReuseIdentifier: "MovieCell")
@@ -69,23 +79,22 @@ final class HomeViewController: BaseViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return moviList.count
+        guard let itemCount = model.results?.count else { return 0 }
+        return itemCount != 0 ? itemCount : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MovieCell.self), for: indexPath) as? MovieCell else { return UITableViewCell() }
-        cell.fillMovieCell(with: moviList[indexPath.row])
+        cell.fillMovieCell(with: model.results?[indexPath.row])
         cell.sizeToFit()
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let id = moviList[indexPath.row].id else { return }
-                let vc = MovieDetailViewController()
+        guard let id = model.results?[indexPath.row].id else { return }
+        let vc = MovieDetailViewController()
         vc.id = id
-                //let detailData = viewModel.getProductList()[indexPath.row]
-                //vc.detailData = detailData
-                navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -96,6 +105,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - UI Components Constraints Extension
 extension HomeViewController {
+    
+    private func createButton() {
+        buttonView.addCornerRadius(radius: 8)
+        buttonView.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-8)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.height.equalTo(56)
+        }
+    }
     
     private func createIndicator() {
         indicator.backgroundColor = AppColors.backgroundColorDark

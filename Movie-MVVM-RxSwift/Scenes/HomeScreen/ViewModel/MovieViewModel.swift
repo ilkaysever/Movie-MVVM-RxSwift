@@ -12,14 +12,16 @@ final class MovieViewModel: BaseViewModel {
     
     let loading: PublishSubject<Bool> = PublishSubject()
     let error: PublishSubject<String> = PublishSubject()
+    let moviRespons: PublishSubject<MovieResponseModel> = PublishSubject()
     let movieList: PublishSubject<[MovieItem]> = PublishSubject()
     
-    func fetchPopularMovies() {
+    func fetchPopularMovies(pageCount: Int) {
         loading.onNext(true)
-        MovieRequests.shared.popularMovieRequest { [weak self] response in
+        MovieRequests.shared.popularMovieRequest(pageCount: pageCount) { [weak self] response in
             guard let self = self else { return }
             loading.onNext(false)
             if let response = response, let results = response.results {
+                moviRespons.onNext(response)
                 movieList.onNext(results)
             } else {
                 error.onNext(ErrorType.unknownError.rawValue)
