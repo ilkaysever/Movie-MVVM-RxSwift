@@ -12,8 +12,9 @@ final class MovieViewModel: BaseViewModel {
     
     let loading: PublishSubject<Bool> = PublishSubject()
     let error: PublishSubject<String> = PublishSubject()
-    let moviRespons: PublishSubject<MovieResponseModel> = PublishSubject()
+    let movieResponse: PublishSubject<MovieResponseModel> = PublishSubject()
     let movieList: PublishSubject<[MovieItem]> = PublishSubject()
+    var totalPageCount = 1
     
     func fetchPopularMovies(pageCount: Int) {
         loading.onNext(true)
@@ -21,7 +22,8 @@ final class MovieViewModel: BaseViewModel {
             guard let self = self else { return }
             loading.onNext(false)
             if let response = response, let results = response.results {
-                moviRespons.onNext(response)
+                totalPageCount = response.totalPages ?? 1
+                movieResponse.onNext(response)
                 movieList.onNext(results)
             } else {
                 error.onNext(ErrorType.unknownError.rawValue)
