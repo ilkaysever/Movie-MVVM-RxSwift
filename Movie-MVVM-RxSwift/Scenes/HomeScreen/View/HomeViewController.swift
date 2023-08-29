@@ -20,8 +20,6 @@ final class HomeViewController: BaseViewController {
     let viewModel = MovieViewModel()
     let disposeBag = DisposeBag()
     var initialPageCount = 1
-    var model = MovieResponseModel()
-    var movies: [MovieItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +34,7 @@ final class HomeViewController: BaseViewController {
         createIndicator()
         createButton()
         buttonView.addTarget(self, action: #selector(didTappedLoad), for: .touchUpInside)
-        buttonView.configureButton(with: IconTextButtonViewModel(image: UIImage(systemName: "plus"), text: "Load More", backgroundColor: AppColors.borderColor))
+        buttonView.configureButton(with: IconTextButtonViewModel(image: UIImage(systemName: "plus"), text: "Custom Button", backgroundColor: AppColors.borderColor))
     }
     
     private func setupBindings(pageCount: Int) {
@@ -46,7 +44,6 @@ final class HomeViewController: BaseViewController {
     private func fetchPopularMovies(pageCount: Int) {
         viewModel.loading.bind(to: self.indicator.rx.isAnimating).disposed(by: disposeBag)
         viewModel.movieResponse.observe(on: MainScheduler.asyncInstance).subscribe { data in
-            self.movies += data.element?.results ?? []
             self.tableView.reloadData()
         }.disposed(by: disposeBag)
         viewModel.error.observe(on: MainScheduler.asyncInstance).subscribe { errorMessage in
@@ -80,25 +77,25 @@ final class HomeViewController: BaseViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return viewModel.movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MovieCell.self), for: indexPath) as? MovieCell else { return UITableViewCell() }
-        cell.fillMovieCell(with: movies[indexPath.row])
+        cell.fillMovieCell(with: viewModel.movies[indexPath.row])
         cell.sizeToFit()
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let id = movies[indexPath.row].id else { return }
+        guard let id = viewModel.movies[indexPath.row].id else { return }
         let vc = MovieDetailViewController()
         vc.id = id
         navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == movies.count - 1 && initialPageCount <= viewModel.totalPageCount {
+        if indexPath.row == viewModel.movies.count - 1 && initialPageCount <= viewModel.totalPageCount {
             initialPageCount += 1
             setupBindings(pageCount: initialPageCount)
         }

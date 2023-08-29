@@ -15,6 +15,7 @@ final class MovieViewModel: BaseViewModel {
     let movieResponse: PublishSubject<MovieResponseModel> = PublishSubject()
     let movieList: PublishSubject<[MovieItem]> = PublishSubject()
     var totalPageCount = 1
+    var movies: [MovieItem] = []
     
     func fetchPopularMovies(pageCount: Int) {
         loading.onNext(true)
@@ -23,6 +24,7 @@ final class MovieViewModel: BaseViewModel {
             loading.onNext(false)
             if let response = response, let results = response.results {
                 totalPageCount = response.totalPages ?? 1
+                movies += response.results ?? []
                 movieResponse.onNext(response)
                 movieList.onNext(results)
             } else {
