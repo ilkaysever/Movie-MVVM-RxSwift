@@ -8,7 +8,7 @@
 import RxSwift
 import RxCocoa
 
-final class MovieDetailViewModel: BaseViewModel {
+final class MovieDetailViewModel {
     
     let loading: PublishSubject<Bool> = PublishSubject()
     let error: PublishSubject<String> = PublishSubject()

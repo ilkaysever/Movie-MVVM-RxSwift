@@ -14,10 +14,10 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        configureUI()
     }
     
-    private func setupUI() {
+    private func configureUI() {
         navigationItem.backButtonTitle = ""
         view.backgroundColor = AppColors.backgroundColor
         view.alpha = 1.0

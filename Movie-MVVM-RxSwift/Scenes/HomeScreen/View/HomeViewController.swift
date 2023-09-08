@@ -19,12 +19,11 @@ final class HomeViewController: BaseViewController {
     // MARK: - Variables
     let viewModel = MovieViewModel()
     let disposeBag = DisposeBag()
-    var initialPageCount = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        setupBindings(pageCount: initialPageCount)
+        setupBindings(pageCount: viewModel.initialPageCount)
         configureTableView()
     }
     
@@ -95,9 +94,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.movies.count - 1 && initialPageCount <= viewModel.totalPageCount {
-            initialPageCount += 1
-            setupBindings(pageCount: initialPageCount)
+        if indexPath.row == viewModel.movies.count - 1 && viewModel.initialPageCount <= viewModel.totalPageCount {
+            viewModel.initialPageCount += 1
+            setupBindings(pageCount: viewModel.initialPageCount)
         }
     }
     

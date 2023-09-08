@@ -44,7 +44,6 @@ final class AppFonts {
 
 final class AppColors {
     
-    
     static var backgroundColor = UIColor.init(red: 252.0/255.0, green: 250.0/255.0, blue: 250.0/255.0, alpha: 1.0)
     static var backgroundColorDark = UIColor.init(red: 37.0/255.0, green: 37.0/255.0, blue: 37.0/255.0, alpha: 1.0)
     

@@ -8,13 +8,14 @@
 import RxSwift
 import RxCocoa
 
-final class MovieViewModel: BaseViewModel {
+final class MovieViewModel {
     
     let loading: PublishSubject<Bool> = PublishSubject()
     let error: PublishSubject<String> = PublishSubject()
     let movieResponse: PublishSubject<MovieResponseModel> = PublishSubject()
     let movieList: PublishSubject<[MovieItem]> = PublishSubject()
     var totalPageCount = 1
+    var initialPageCount = 1
     var movies: [MovieItem] = []
     
     func fetchPopularMovies(pageCount: Int) {
